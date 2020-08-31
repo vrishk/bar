@@ -11,7 +11,7 @@ export const style = {
   cursor: "default",
   position: "fixed",
   zIndex: "-1",
-  left: "30%",
+  left: "35%",
   userSelect: "none",
   overflow: "visible",
 };
