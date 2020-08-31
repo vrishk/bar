@@ -1,6 +1,6 @@
 export const command = "";
 
-export const refreshFrequency = 0;
+export const refreshFrequency = 100000;
 
 // const style = {
 //   cursor: "default",

@@ -3,7 +3,7 @@ import { config } from "./config.jsx";
 export const command =
   "pmset -g batt | egrep '([0-9]+%).*' -o --colour=auto | cut -f1-2 -d';'";
 
-export const refreshFrequency = 1000;
+export const refreshFrequency = 2000;
 
 export const style = {
   ...config,
