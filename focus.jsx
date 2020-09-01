@@ -3,7 +3,7 @@ import { config } from "./config.jsx";
 export const command =
   "osascript -e 'tell application \"System Events\"' -e 'set frontApp to name of first application process whose frontmost is true' -e 'end tell'";
 
-export const refreshFrequency = 100;
+export const refreshFrequency = 500;
 
 export const style = {
   ...config,
