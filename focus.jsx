@@ -1,7 +1,6 @@
 import { config } from "./config.jsx";
 
-export const command =
-  "osascript -e 'tell application \"System Events\"' -e 'set frontApp to name of first application process whose frontmost is true' -e 'end tell'";
+export const command = "/usr/local/bin/yabai -m query --windows --window";
 
 export const refreshFrequency = 500;
 
@@ -18,8 +17,9 @@ export const style = {
 };
 
 export const render = (output) => {
-  let dt = output.output;
-  console.log({ dt });
+  console.log(output);
+  let app = JSON.parse(output.output).app;
+  console.log({ app });
   return (
     <div style={style}>
       <span
@@ -27,7 +27,7 @@ export const render = (output) => {
           color: "rgb(205, 205, 205)",
         }}
       >
-        {dt}
+        {app}
       </span>
     </div>
   );
