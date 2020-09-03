@@ -18,7 +18,7 @@ export const style = {
 
 export const render = (output) => {
   let dt = output.output;
-  console.log({ dt });
+  // console.log({ dt });
   return (
     <div style={style}>
       <span

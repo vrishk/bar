@@ -18,7 +18,7 @@ export const style = {
 
 export const render = (output) => {
   let temp = parseInt(output.output);
-  console.log({ temp });
+  // console.log({ temp });
   return (
     <div style={style}>
       <span
