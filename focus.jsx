@@ -17,11 +17,12 @@ export const style = {
 };
 
 export const render = (output) => {
-  console.log(output);
   let app = "Finder";
-  if (output.error === undefined) {
+  try {
     app = JSON.parse(output.output).app;
     console.log({ app });
+  } catch (e) {
+    console.log(e);
   }
   return (
     <div style={style}>
