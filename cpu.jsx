@@ -1,6 +1,6 @@
 import { config } from "./config.jsx";
 
-export const command = "~/Software/cli/osx-cpu-temp/osx-cpu-temp";
+export const command = "/usr/local/bin/osx-cpu-temp";
 
 export const refreshFrequency = 500;
 
