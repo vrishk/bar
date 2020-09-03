@@ -18,8 +18,11 @@ export const style = {
 
 export const render = (output) => {
   console.log(output);
-  let app = JSON.parse(output.output).app;
-  console.log({ app });
+  let app = "Finder";
+  if (output.error === undefined) {
+    app = JSON.parse(output.output).app;
+    console.log({ app });
+  }
   return (
     <div style={style}>
       <span
