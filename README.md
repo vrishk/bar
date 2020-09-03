@@ -6,7 +6,7 @@ A simple menubar created using Übersicht. Inspired by [zenbar](https://github.c
 
 Consists of the following features:
 
-- Currently active app (`focus.jsx`)
+- Focused/currently active app (`focus.jsx`)
 - Date and time (`time.jsx`)
 - CPU Temperature (`cpu.jsx`)
 - Battery charge and status (`battery.jsx`)
@@ -15,17 +15,20 @@ Consists of the following features:
 
 Make sure you have [Übersicht](http://tracesof.net/uebersicht/) installed.
 
-The CPU Temperature widget makes use of [osx-cpu-temp](https://github.com/lavoiesl/osx-cpu-temp). Follow the instructions to clone and create the binary `osx-cpu-temp`. In `cpu.jsx`, replace the line:
+The Focused widget makes use of [yabai](https://github.com/koekeishiya/yabai), the window manager for macOS. If you do not wish to use yabai, replace the line in `focus.jsx`:
 
 ```javascript
-export const command = "~/Software/cli/osx-cpu-temp/osx-cpu-temp";
+export const command = "/usr/local/bin/yabai -m query --windows --window";
 ```
 
-with:
+with the corresponding AppleScript command:
 
 ```javascript
-export const command = "your/path/to/osx-cpu-temp/osx-cpu-temp";
+export const command =
+  "osascript -e 'tell application \"System Events\"' -e 'set frontApp to name of first application process whose frontmost is true' -e 'end tell'";
 ```
+
+The CPU Temperature widget makes use of [osx-cpu-temp](https://github.com/lavoiesl/osx-cpu-temp). Install it with `brew install osx-cpu-temp`.
 
 Run the following command:
 
