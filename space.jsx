@@ -16,8 +16,18 @@ export const style = {
   overflow: "visible",
 };
 
+export const updateState = (event, previousState) => {
+  console.log({ previousState, event });
+  if (!event.output) {
+    return {
+      ...previousState,
+      warning: `Empty Output: ${event.error}`,
+    };
+  }
+  return event;
+};
+
 export const render = (output) => {
-  // let space = output.output;
   let spaces = [];
   try {
     spaces = JSON.parse(output.output);
