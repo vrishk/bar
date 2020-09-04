@@ -1,7 +1,6 @@
 import { config } from "./config.jsx";
 
-export const command =
-  "/usr/local/bin/yabai -m query --spaces --space | /usr/local/bin/jq .index";
+export const command = "/usr/local/bin/yabai -m query --spaces";
 
 export const refreshFrequency = 500;
 
@@ -11,24 +10,32 @@ export const style = {
   paddingLeft: "10px",
   position: "fixed",
   cursor: "default",
-  right: "40%",
+  left: "62%",
   userSelect: "none",
   zIndex: "-1",
   overflow: "visible",
 };
 
 export const render = (output) => {
-  let space = output.output;
-  console.log(output);
+  // let space = output.output;
+  let spaces = [];
+  try {
+    spaces = JSON.parse(output.output);
+  } catch {}
+  console.log(spaces);
   return (
     <div style={style}>
-      <span
-        style={{
-          color: "rgb(205, 205, 205)",
-        }}
-      >
-        {space}
-      </span>
+      {spaces.map((space, index) => {
+        return (
+          <span
+            style={{
+              color: "rgb(205, 205, 205)",
+            }}
+          >
+            {space.focused ? "⚪ " : "⭘ "}
+          </span>
+        );
+      })}
     </div>
   );
 };

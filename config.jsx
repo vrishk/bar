@@ -1,6 +1,6 @@
 export const command = "";
 
-export const refreshFrequency = 100000;
+export const refreshFrequency = false;
 
 export const config = {
   background: "rgb(30,30,30,0.5)",
