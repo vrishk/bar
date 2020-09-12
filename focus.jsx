@@ -2,7 +2,7 @@ import { config } from "./config.jsx";
 
 export const command = "/usr/local/bin/yabai -m query --windows --window";
 
-export const refreshFrequency = 500;
+export const refreshFrequency = false;
 
 export const style = {
   ...config,
@@ -14,17 +14,6 @@ export const style = {
   left: "4%",
   userSelect: "none",
   overflow: "visible",
-};
-
-export const updateState = (event, previousState) => {
-  console.log({ previousState, event });
-  if (!event.output) {
-    return {
-      ...previousState,
-      warning: `Empty Output: ${event.error}`,
-    };
-  }
-  return event;
 };
 
 export const render = (output) => {

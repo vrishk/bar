@@ -2,7 +2,7 @@ import { config } from "./config.jsx";
 
 export const command = "/usr/local/bin/yabai -m query --spaces";
 
-export const refreshFrequency = 300;
+export const refreshFrequency = false;
 
 export const style = {
   ...config,
