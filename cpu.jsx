@@ -2,7 +2,7 @@ import { config } from "./config.jsx";
 
 export const command = "/usr/local/bin/osx-cpu-temp";
 
-export const refreshFrequency = 500;
+export const refreshFrequency = 2000;
 
 export const style = {
   ...config,

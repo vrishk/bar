@@ -1,8 +1,8 @@
 import { config } from "./config.jsx";
 
-export const command = "date +'%a %d %b %Y %I:%M:%S'";
+export const command = "date +'%a %d %b %Y %I:%M'";
 
-export const refreshFrequency = 500;
+export const refreshFrequency = 60000;
 
 export const style = {
   ...config,
