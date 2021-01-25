@@ -70,6 +70,7 @@ export const render = (output) => {
                     margin: "5px",
                   }
                 : {
+                    padding: "4px 7px",
                     color: "rgb(180, 180, 180)",
                     margin: "5px",
                   }
