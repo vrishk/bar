@@ -66,11 +66,10 @@ export const render = (output) => {
                 ? {
                     color: "rgba(0, 0, 0, 0.7)",
                     backgroundColor: "rgb(220, 220, 220)",
-                    padding: "3px 7px",
+                    padding: "4px 7px",
                     margin: "5px",
                   }
                 : {
-                    padding: "3px 5px",
                     color: "rgb(180, 180, 180)",
                     margin: "5px",
                   }

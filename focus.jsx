@@ -26,8 +26,8 @@ export const render = (output) => {
     console.log(e);
     res = "";
   }
-  if (res.length > 25) {
-    res = res.substr(0, 22) + "...";
+  if (res.length > 50) {
+    res = res.substr(0, 47) + "...";
   }
   return (
     <div style={style}>

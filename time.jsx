@@ -1,16 +1,15 @@
 import { config } from "./config.jsx";
 
-export const command = "date +'%I:%M %a %Y-%m-%d'";
+export const command = "date +'%I:%M %Y-%m-%d'";
 
 export const refreshFrequency = 60000;
 
 export const style = {
   ...config,
-  paddingRight: "20px",
-  paddingLeft: "20px",
+  margin: "0px 5px",
   cursor: "default",
   position: "fixed",
-  right: "18.5%",
+  right: "13%",
   userSelect: "none",
   overflow: "visible",
 };
@@ -22,7 +21,7 @@ export const render = (output) => {
     <div style={style}>
       <span
         style={{
-          color: "rgb(205, 205, 205)",
+          color: "deepskyblue",
         }}
       >
         {dt}

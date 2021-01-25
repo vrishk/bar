@@ -6,11 +6,11 @@ export const refreshFrequency = 2000;
 
 export const style = {
   ...config,
-  paddingRight: "10px",
-  paddingLeft: "10px",
+  margin: "0px 5px",
   position: "fixed",
   cursor: "default",
-  right: "9%",
+  right: "7%",
+  transform: "translate(50%)",
   userSelect: "none",
   overflow: "visible",
 };
@@ -20,13 +20,6 @@ export const render = (output) => {
   // console.log({ temp });
   return (
     <div style={style}>
-      <span
-        style={{
-          color: "rgb(205, 205, 205)",
-        }}
-      >
-        temp:
-      </span>
       <span
         style={{
           color: temp > 60 ? "rgba(255, 0, 0, 1.0)" : "rgba(255, 205, 1.0)",
