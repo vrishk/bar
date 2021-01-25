@@ -11,9 +11,8 @@ export const style = {
   paddingLeft: "10px",
   position: "fixed",
   cursor: "default",
-  right: "4%",
+  right: "0%",
   userSelect: "none",
-  zIndex: "-1",
   overflow: "visible",
 };
 

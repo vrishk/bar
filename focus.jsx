@@ -1,6 +1,7 @@
 import { config } from "./config.jsx";
 
-export const command = "/usr/local/bin/yabai -m query --windows --window";
+export const command =
+  "~/Software/ui/widgets/bar/scripts/get_process.sh /usr/local/bin/yabai";
 
 export const refreshFrequency = false;
 
@@ -10,19 +11,23 @@ export const style = {
   paddingLeft: "20px",
   cursor: "default",
   position: "fixed",
-  zIndex: "-1",
-  left: "4%",
+  left: "50%",
+  transform: "translate(-50%)",
   userSelect: "none",
   overflow: "visible",
 };
 
 export const render = (output) => {
-  let app = "Finder";
+  let windows, res;
+  windows = JSON.parse(output.output).process;
   try {
-    app = JSON.parse(output.output).app;
-    console.log({ app });
+    res = `${windows[0].app} / ${windows[0].title}`;
   } catch (e) {
     console.log(e);
+    res = "";
+  }
+  if (res.length > 25) {
+    res = res.substr(0, 22) + "...";
   }
   return (
     <div style={style}>
@@ -31,7 +36,7 @@ export const render = (output) => {
           color: "rgb(205, 205, 205)",
         }}
       >
-        {app}
+        {res}
       </span>
     </div>
   );

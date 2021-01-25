@@ -1,0 +1,21 @@
+{
+  "Kitty": "Terminal",
+  "Alacritty": "Terminal",
+  "iTerm2": "Terminal",
+  "Terminal": "Terminal",
+  "Safari": "Browser",
+  "Brave Browser": "Browser",
+  "Chrome": "Browser",
+  "Firefox": "Browser",
+  "Finder": "Finder",
+  "Music": "Music",
+  "Calendar": "Calendar",
+  "Spark": "Mail",
+  "Thunderbird": "Mail",
+  "PDF Expert": "PDF",
+  "Preview": "PDF",
+  "Message": "Message",
+  "Whatsapp": "Message",
+  "Messenger": "Message",
+  "Signal": "Message"
+}

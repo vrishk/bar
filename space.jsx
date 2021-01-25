@@ -1,18 +1,28 @@
 import { config } from "./config.jsx";
 
-export const command = "/usr/local/bin/yabai -m query --spaces";
+const group = require("./windows.json");
+const icon = require("./icons.json");
+
+const getIcon = (name) => {
+  const getGroup = (name) => {
+    if (group[name]) return group[name];
+    return "Window";
+  };
+  return icon[getGroup(name)];
+};
+
+export const command =
+  "~/Software/ui/widgets/bar/scripts/get_spaces.sh /usr/local/bin/yabai";
 
 export const refreshFrequency = false;
 
 export const style = {
   ...config,
   paddingRight: "10px",
-  paddingLeft: "10px",
   position: "fixed",
   cursor: "default",
-  left: "62%",
+  left: "0%",
   userSelect: "none",
-  zIndex: "-1",
   overflow: "visible",
 };
 
@@ -28,21 +38,45 @@ export const updateState = (event, previousState) => {
 };
 
 export const render = (output) => {
-  let spaces = [];
+  let sw = {};
   try {
-    spaces = JSON.parse(output.output);
+    sw = JSON.parse(output.output);
   } catch {}
-  console.log(spaces);
+
+  let spaces = sw.spaces;
+
+  let windows = {};
+  for (const win of sw.windows) {
+    if (!windows[win.space]) windows[win.space] = [];
+    windows[win.space].push(getIcon(win.app));
+  }
+
+  console.log(windows);
+
   return (
     <div style={style}>
       {spaces.map((space, index) => {
+        let icons = windows[index + 1]
+          ? " " + windows[index + 1].join(" ")
+          : "";
         return (
           <span
-            style={{
-              color: "rgb(205, 205, 205)",
-            }}
+            style={
+              space.focused
+                ? {
+                    color: "rgba(0, 0, 0, 0.7)",
+                    backgroundColor: "rgb(220, 220, 220)",
+                    padding: "3px 7px",
+                    margin: "5px",
+                  }
+                : {
+                    padding: "3px 5px",
+                    color: "rgb(180, 180, 180)",
+                    margin: "5px",
+                  }
+            }
           >
-            {space.focused ? "⚪ " : "⭘ "}
+            {`${index + 1}${icons}`}
           </span>
         );
       })}

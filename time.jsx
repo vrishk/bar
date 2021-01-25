@@ -1,6 +1,6 @@
 import { config } from "./config.jsx";
 
-export const command = "date +'%a %d %b %Y %I:%M'";
+export const command = "date +'%I:%M %a %Y-%m-%d'";
 
 export const refreshFrequency = 60000;
 
@@ -10,8 +10,7 @@ export const style = {
   paddingLeft: "20px",
   cursor: "default",
   position: "fixed",
-  zIndex: "-1",
-  left: "35%",
+  right: "18.5%",
   userSelect: "none",
   overflow: "visible",
 };

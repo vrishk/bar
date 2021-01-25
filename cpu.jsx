@@ -10,9 +10,8 @@ export const style = {
   paddingLeft: "10px",
   position: "fixed",
   cursor: "default",
-  right: "15%",
+  right: "9%",
   userSelect: "none",
-  zIndex: "-1",
   overflow: "visible",
 };
 
