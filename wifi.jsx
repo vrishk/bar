@@ -9,8 +9,7 @@ export const style = {
   margin: "0px 5px",
   position: "fixed",
   cursor: "default",
-  transform: "translate(50%)",
-  right: "12%",
+  right: "22%",
   userSelect: "none",
   overflow: "visible",
 };
