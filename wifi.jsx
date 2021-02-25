@@ -15,12 +15,21 @@ export const style = {
 };
 
 export const render = (output) => {
-  let wifi = { status: "inactive", ssid: "" };
+  let wifi = { status: "inactive", ssid: "", ethernet: "inactive" };
   try {
     wifi = JSON.parse(output.output);
-  } catch {}
-  let on = wifi.status === "active";
-  let color = "orange";
+  } catch (e) {
+    console.log(e);
+  }
+
+  let on;
+
+  if (wifi.ethernet == "active") {
+    on = true;
+    wifi.ssid = "Ethernet";
+  } else {
+    on = wifi.status === "active";
+  }
 
   console.log(wifi);
 
@@ -28,7 +37,7 @@ export const render = (output) => {
     <div style={style}>
       <span
         style={{
-          color: color,
+          color: "orange",
         }}
       >
         {on ? wifi.ssid : "􀙈"}
