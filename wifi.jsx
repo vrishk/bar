@@ -10,7 +10,7 @@ export const style = {
   margin: "0px 5px",
   position: "fixed",
   cursor: "default",
-  right: "22%",
+  right: "24%",
   userSelect: "none",
   overflow: "visible",
 };
