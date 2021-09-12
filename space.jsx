@@ -41,7 +41,9 @@ export const render = (output) => {
   let sw = {};
   try {
     sw = JSON.parse(output.output);
-  } catch {}
+  } catch {
+    return <div style={style}> </div>;
+  }
 
   let spaces = sw.spaces;
 
