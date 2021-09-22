@@ -1,7 +1,7 @@
 import { config } from "./config.jsx";
 
 export const command =
-  "~/Software/ui/widgets/bar/scripts/get_process.sh /usr/local/bin/yabai";
+  "~/Software/ui/widgets/bar/scripts/get_process.sh /opt/homebrew/bin/yabai";
 
 export const refreshFrequency = false;
 

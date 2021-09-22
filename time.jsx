@@ -9,7 +9,7 @@ export const style = {
   margin: "0px 5px",
   cursor: "default",
   position: "fixed",
-  right: "16%",
+  right: "13%",
   userSelect: "none",
   transform: "translate(50%)",
   overflow: "visible",
