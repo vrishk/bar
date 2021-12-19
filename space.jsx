@@ -66,16 +66,16 @@ export const render = (output) => {
             style={
               space.focused
                 ? {
-                    color: "rgba(0, 0, 0, 0.7)",
-                    backgroundColor: "rgb(220, 220, 220)",
-                    padding: "4px 7px",
-                    margin: "5px",
-                  }
+                  color: "rgba(0, 0, 0, 0.7)",
+                  backgroundColor: "rgb(220, 220, 220)",
+                  padding: "4px 7px",
+                  margin: "5px",
+                }
                 : {
-                    padding: "4px 7px",
-                    color: "rgb(180, 180, 180)",
-                    margin: "5px",
-                  }
+                  padding: "4px 7px",
+                  color: "rgb(180, 180, 180)",
+                  margin: "5px",
+                }
             }
           >
             {`${index + 1}${icons}`}
