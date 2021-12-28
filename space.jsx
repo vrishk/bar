@@ -64,7 +64,7 @@ export const render = (output) => {
         return (
           <span
             style={
-              space.focused
+              space["has-focus"]
                 ? {
                   color: "rgba(0, 0, 0, 0.7)",
                   backgroundColor: "rgb(220, 220, 220)",
