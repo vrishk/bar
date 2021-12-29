@@ -19,15 +19,15 @@ export const style = {
 
 export const render = (output) => {
   let windows, res;
-  windows = JSON.parse(output.output).process;
   try {
+    windows = JSON.parse(output.output).process;
     res = `${windows[0].app} / ${windows[0].title}`;
   } catch (e) {
     console.log(e);
     res = "";
   }
-  if (res.length > 50) {
-    res = res.substr(0, 47) + "...";
+  if (res.length > 30) {
+    res = res.slice(0, 47) + "...";
   }
   return (
     <div style={style}>
