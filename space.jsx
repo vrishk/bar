@@ -21,7 +21,7 @@ export const style = {
   paddingRight: "10px",
   position: "fixed",
   cursor: "default",
-  left: "0%",
+  left: "1%",
   userSelect: "none",
   overflow: "visible",
 };
