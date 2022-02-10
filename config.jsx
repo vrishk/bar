@@ -4,7 +4,7 @@ export const refreshFrequency = false;
 
 export const config = {
   top: "0px",
-  height: "29px",
-  lineHeight: "28px",
+  height: "33px",
+  lineHeight: "30px",
   fontFamily: "'MesloLGS NF', 'FontAwesome'",
 };
