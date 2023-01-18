@@ -18,5 +18,6 @@
   "Message": "Message",
   "Whatsapp": "Message",
   "Messenger": "Message",
-  "Signal": "Message"
+  "Signal": "Message",
+  "Arc": "Browser",
 }
