@@ -17,6 +17,7 @@ export const style = {
 };
 
 export const render = (output) => {
+  console.log("battery", output);
   let [level, status] = output.output.split("; ");
   let charging = status !== "discharging\n";
   let color = "rgba(0, 205, 0, 1.0)";
