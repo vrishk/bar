@@ -1,7 +1,7 @@
 import { config } from "./config.jsx";
 
 export const command =
-  "~/Software/ui/bar/scripts/get_wifi.sh 2>/dev/null ";
+  "~/Software/bar/scripts/get_wifi.sh 2>/dev/null ";
 
 export const refreshFrequency = 10000;
 

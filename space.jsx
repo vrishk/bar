@@ -12,7 +12,7 @@ const getIcon = (name) => {
 };
 
 export const command =
-  "~/Software/ui/bar/scripts/get_spaces.sh /opt/homebrew/bin/yabai";
+  "~/Software/bar/scripts/get_spaces.sh /opt/homebrew/bin/yabai";
 
 export const refreshFrequency = false;
 
