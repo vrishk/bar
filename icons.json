@@ -1,11 +1,11 @@
 {
   "Terminal": "❱",
-  "Browser": "􀎭",
-  "Finder": "􀈖",
-  "Music": "􀑪",
-  "Calendar": "􀉉",
-  "Mail": "􀍖",
-  "PDF": "􀉀",
-  "Message": "􀌤",
-  "Window": "􀧵"
+  "Browser": "B",
+  "Finder": "F",
+  "Music": "iT",
+  "Calendar": "C",
+  "Mail": "M",
+  "PDF": "P",
+  "Message": "m",
+  "Window": "."
 }
